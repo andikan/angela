@@ -1,0 +1,300 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  /*overflow-x: hidden;
+  overflow-y: auto;*/
+  background: url(../image/stressed_linen.png);
+}
+
+#world {
+  /*position: absolute;
+  top: 0;*/
+  margin-top: -300px;
+}
+
+@-webkit-keyframes beat {
+    0% {-webkit-transform: scale(1) rotate(225deg); -webkit-box-shadow:0 0 40px rgba(213,9,60,1);}
+    50% {-webkit-transform: scale(1.1) rotate(225deg); -webkit-box-shadow:0 0 70px rgba(213,9,60,0.6);}
+    100% {-webkit-transform: scale(1) rotate(225deg); -webkit-box-shadow:0 0 40px rgba(213,9,60,1);}
+}
+@-moz-keyframes beat {  
+    0% {-moz-transform: scale(1) rotate(225deg); -moz-box-shadow:0 0 40px rgba(213,9,60,1);}
+    50% {-moz-transform: scale(1.1) rotate(225deg); -moz-box-shadow:0 0 70px rgba(213,9,60,0.6);}
+    100% {-moz-transform: scale(1) rotate(225deg); -moz-box-shadow:0 0 40px rgba(213,9,60,1);}
+}
+@keyframes beat {  
+    0% {transform: scale(1) rotate(225deg); box-shadow:0 0 40px #d5093c;}
+    50% {transform: scale(1.1) rotate(225deg); box-shadow:0 0 70px #d5093c;}
+    100% {transform: scale(1) rotate(225deg); box-shadow:0 0 40px #d5093c;}
+}
+
+/*#background {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100%;
+    height:100%;
+    background: #ffa5a5;
+    background: -moz-linear-gradient(top,  #ffa5a5 0%, #ffd3d3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa5a5), color-stop(100%,#ffd3d3));
+    background: -webkit-linear-gradient(top,  #ffa5a5 0%,#ffd3d3 100%);
+    background: linear-gradient(top,  #ffa5a5 0%,#ffd3d3 100%);
+}*/
+#chest {
+    position:relative;
+    width:500px;
+    height:450px;
+    margin:0 auto;
+    cursor: pointer;
+}
+.click {
+  position: absolute;
+  background: url(../image/click1.png);
+  width: 240px;
+  height: 160px;
+  top: -30px;
+  right: -180px;
+  opacity: 0;
+}
+.heart {
+    position:absolute;
+    z-index:2;
+    background: -moz-linear-gradient(-180deg,  #F50A45 0%, #d5093c 40%);
+    background: -webkit-gradient(linear, right 50%, left 50%, color-stop(0%,#F50A45), color-stop(40%,#d5093c));
+    background: -webkit-linear-gradient(-180deg,  #F50A45 0%,#d5093c 40%);
+    background: linear-gradient(-180deg,  #F50A45 0%,#d5093c 40%);
+    -webkit-animation: beat 0.7s ease 0s infinite normal;
+    -moz-animation: beat 0.7s ease 0s infinite normal;
+    animation: beat 0.7s ease 0s infinite normal;
+
+}
+.heart.center {
+    background: -moz-linear-gradient(-45deg,  #B80734 0%, #d5093c 40%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#B80734), color-stop(40%,#d5093c));
+    background: -webkit-linear-gradient(-45deg,  #B80734 0%,#d5093c 40%);
+    background: linear-gradient(-45deg,  #B80734 0%,#d5093c 40%);
+}
+.heart.top {
+    z-index:3;
+}
+.side {
+    top:50px;
+    width:220px;
+    height:220px;
+    -moz-border-radius: 220px;
+    -webkit-border-radius: 220px;
+    border-radius: 220px;
+}
+.center {
+    width:210px;
+    height:210px;
+    bottom:100px;
+    left:145px;
+    font-size:0;
+    text-indent:-9999px;
+}
+.left {
+    left:62px;
+}
+.right {
+    right:62px;
+}
+
+.title {
+  width: 100%;
+  height: auto;
+}
+
+
+.title .insetType {
+  text-align: center;
+  /*padding-left: 50px;  The padding is just there to move the h1 element to the center of the div */
+  font-family: 'Vollkorn', serif;
+  /*font-family: Rockwell, Georgia, "Times New Roman", Times, serif;*/
+  margin: 0;
+  font-size: 40px;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.9);
+  /*text-shadow: rgba(0,0,0,0.8) -1px 0, rgba(0,0,0,0.5) 0 -1px, rgba(255,255,255,0.8) 0 1px, rgba(0,0,0,0.5) -1px -2px;*/
+  /*text-shadow: 1px 1px rgba(197, 223, 248,0.8),2px 2px rgba(197, 223, 248,0.8),3px 3px rgba(197, 223, 248,0.8),4px 4px rgba(197, 223, 248,0.8),5px 5px rgba(197, 223, 248,0.8),6px 6px rgba(197, 223, 248,0.8);*/
+  text-shadow: 0 1px 1px #fff;     
+}
+
+.title .titletext {
+  text-align: center;
+  font-family: 'Vollkorn', serif;
+  letter-spacing: 0.2em;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.2);
+  text-shadow: 0 1px 1px #fff;  
+}
+
+
+.grid {
+  position: relative;
+  width: 310px;
+  margin: 0 auto;
+  margin-top: -500px; 
+}
+
+.grid .click2 {
+  position: absolute;
+  background: url(../image/click2.png);
+  width: 210px;
+  height: 140px;
+  top: 25px;
+  left: -200px;
+  opacity: 0;
+}
+
+.grid .titletext {
+  padding-bottom: 100px;
+}
+
+.grid > .left,.grid > .right{
+  display:inline-block
+}
+.grid > .left{
+  width:170px;
+  height:239px;
+  margin-right:-4px
+}
+
+.grid > div > div{
+  display:block;
+  height:34px;
+}
+.grid > div > div > div{
+  width:30px;
+  height:30px;
+  background-color:rgba(245, 20, 50, 0.9);
+  display:inline-block;
+  float:right;
+  margin:2px;
+  -moz-box-shadow:    1px 1px 1px 0.5px #F97183, inset 0 0 4px 2px rgba(173, 0, 40, 1);
+   -webkit-box-shadow:  1px 1px 1px 0.5px #F97183, inset 0 0 4px 2px rgba(173, 0, 40, 1);
+   box-shadow:          1px 1px 1px 0.5px #F97183, inset 0 0 4px 2px rgba(173, 0, 40, 1);
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+   opacity: 0;
+   cursor: pointer;
+   -moz-box-shadow:8px 24px 2px rgba(212, 17, 30,0.4),16px -4px 2px rgba(250, 74, 61,0.1),24px 12px 2px rgba(250, 201, 41,0.1),inset 0 0 4px 2px rgba(173, 0, 40, 1);
+   -webkit-box-shadow:8px 24px 2px rgba(212, 17, 30,0.4),16px -4px 2px rgba(250, 74, 61,0.1),24px 12px 2px rgba(250, 201, 41,0.1),inset 0 0 4px 2px rgba(173, 0, 40, 1);
+   box-shadow:8px 24px 2px rgba(212, 17, 30,0.4),16px -4px 2px rgba(250, 74, 61,0.1),24px 12px 2px rgba(250, 201, 41,0.1),inset 0 0 4px 2px rgba(173, 0, 40, 1);
+}
+
+.grid > div.right > div > div{
+  float:left;
+}
+
+.gallery {
+  position: relative;
+  width: 600px;
+  /*margin: 0 auto;*/
+  /*margin-top: -450px;*/
+  margin-top: -37%;
+}
+
+.pic {
+  display: none;
+}
+
+.pic > span {
+  width: 77px;
+  height: 27px;
+  display: block;
+  position: absolute;
+  top: -12px;
+  left: 260px;
+  background: url(../image/tape.png) no-repeat;
+}
+
+.pic img {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+  max-height: 500px;
+  padding: 10px 10px 35px 10px;
+  background: url(../image/gray_jean.png);
+  border: 1px solid #fff;
+  -moz-box-shadow:1px 1px 8px 1px rgba(163, 163, 163, 0.6);
+  -webkit-box-shadow:1px 1px 8px 1px rgba(163, 163, 163, 0.6);
+  box-shadow:1px 1px 8px 1px rgba(163, 163, 163, 0.6);
+}
+
+.pic .content {
+  /*display: block;*/
+  position: absolute;
+  bottom: 10px;
+  right: 60px;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 15px;
+  color: rgba(59, 59, 59, 0.7);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-shadow: 0 1px 1px #fff; 
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  /*margin-top: 500px;*/
+}
+
+.footer .end {
+  float: right;
+  font-family: 'Vollkorn', serif;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.2);
+  text-shadow: 0 1px 1px #fff;  
+}
+
+.footer .end:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer .small-heart:hover {
+  opacity: 0.9;
+}
+
+.small-heart {
+  position: absolute;
+  background: url(../image/heart.png);
+  width: 24px;
+  height: 24px;
+  opacity: 0.5;
+  right: 150px;
+  top: 16px;
+  cursor: pointer;
+}
+
+.rody {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 0;
+  left: 10px;
+  background: url(../image/rodyshare50.png);
+  cursor: pointer;
+}
+
+.fb-holder {
+  position: absolute;
+  width: 55px;
+  height: 65px;
+  top: -100px;
+  left: 123px;
+  /*margin-top: -100px;*/
+}
+
+.fb-like {
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
